@@ -2,12 +2,19 @@
 
 Startpage for your favorites links
 
+[Live Demo](https://jkoenen2.github.io/DynamicStartpage/)
+
 ## Screenshots
+
+![Screenshot](doc/screenshot.jpg)
+![Demo](doc/video.gif)
+![Ultrawide](doc/ultrawide.png)
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+* Download all files except the doc Folder
+* Change the links and captions in index.html to your desire
+* set index.html as the startpage in your browser
 
 ## Acknowledgements
 * [Background System](https://www.webpagefx.com/tools/emoji-cheat-sheet)
