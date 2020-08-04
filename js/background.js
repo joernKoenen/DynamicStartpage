@@ -19,7 +19,7 @@ var imgNo = 0;
 
 // Apply new image with number n
 function applyImg(n) {
-  document.getElementById('bg').style.backgroundImage = "url('img/stars2.png'), url('img/" + n + ".png')";
+  document.getElementById('bg').style.backgroundImage = "url('img/stars.png'), url('img/" + n + ".png')";
   this.imgNo = n;
 }
 
