@@ -8,6 +8,8 @@ Startpage for your favorites links
 
 ![Screenshot](doc/screenshot.jpg)
 ![Demo](doc/video.gif)
+
+Ultrawide also works
 ![Ultrawide](doc/ultrawide.png)
 
 ## Getting Started
