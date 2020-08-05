@@ -7,7 +7,7 @@ You can also use other dynamic wallpapers.
 
 ## Getting Started
 
-* Download the latest [release.zip](https://github.com/JKoenen2/DynamicStartpage/releases/latest/download/release.zip)
+* Download the latest [release.zip](https://github.com/JKoenen2/DynamicStartpage/releases/latest/download/release.zip) and extract it
 * Change the links and captions in index.html to your desire
 * set index.html as the startpage in your browser
   * [Guide for Firefox](https://stpg.tk/guides/firefox-startpage)
