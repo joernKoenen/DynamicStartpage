@@ -4,14 +4,8 @@ var sunriseImgNo = 6;
 var sunsetImgNo = 12;
 
 // Control status
-
-var getSunTime = false;
 var sunriseTime = 8 * 60; //8:00
 var sunsetTime = 20 * 60; //20:00
-
-var getLocation = false;
-var lat = 0;
-var lng = 0;
 
 var timeCycle = [];
 var updateInt = 2; //in Minutes
@@ -67,37 +61,5 @@ function updateTimeCircle() {
   this.update();
 }
 
-function receiveSunTime() {
-  if (getSunTime) {
-    var requestURL = "https://api.sunrise-sunset.org/json?formatted=0&lat=" + this.lat + "&lng=" + this.lng;
-    var request = new XMLHttpRequest();
-    request.open('GET', requestURL);
-    request.responseType = 'json';
-    request.send();
-    request.onload = function() {
-      calcSunTime(request.response);
-    };
-    request.onerror = function() {
-      this.sunriseTime = 5 * 60;
-      this.sunsetTime = 20 * 60;
-      this.updateTimeCircle();
-    };
-  } else this.updateTimeCircle();
-}
-
-function calcSunTime(response) {
-  var sunriseDate = this.parseISOString(response.results.sunrise);
-  var sunsetDate = this.parseISOString(response.results.sunset);
-  this.sunriseTime = 60 * sunriseDate.getHours() + sunriseDate.getMinutes();
-  this.sunsetTime = 60 * sunsetDate.getHours() + sunsetDate.getMinutes();
-  this.updateTimeCircle();
-}
-
-// Convert ISO time string to Date object
-function parseISOString(s) {
-  var b = s.split(/\D+/);
-  return new Date(Date.UTC(b[0], --b[1], b[2], b[3], b[4], b[5], b[6]));
-}
-
-this.receiveSunTime();
+this.updateTimeCircle();
 setInterval(this.update, this.updateInt * 60000);

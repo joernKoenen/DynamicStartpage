@@ -30,4 +30,4 @@ function GetClock() {
 }
 
 GetClock();
-setInterval(GetClock(), 30000);
+setInterval(GetClock, 30000);
